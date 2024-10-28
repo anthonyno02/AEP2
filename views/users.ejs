@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Z - Lista de Usuários</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Lista de Usuários</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (users && users.length > 0) { %> <!-- Verifica se 'users' é definido e contém elementos -->
+                    <% users.forEach(user => { %> <!-- Itera sobre a lista de 'users' -->
+                        <tr>
+                            <td><%= user.id %></td>
+                            <td><%= user.name %></td>
+                            <td><%= user.email %></td>
+                            <td>
+                                <!-- Botão para modificar -->
+                                <a href="/users/cadastro/<%= user.id %>">Modificar</a>
+                                <!-- Botão para deletar -->
+                                <a href="/users/delete/<%= user.id %>" class="btn btn-danger btn-sm">Deletar</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="3">Nenhum usuário cadastrado</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <!-- src/views/users.ejs -->
+        <a class="btn btn-primary mt-3" href="/users/cadastro">Adicionar</a>
+
+        <a class="btn btn-secondary mt-3" href="/users/login">Login</a>
+
+        <a href="/users/postagem" class="btn btn-primary mt-3">Postagem</a> 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

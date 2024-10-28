@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="css/perfil.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header style="background-image: url('https://www.securitymagazine.com/ext/resources/images/cyber-products-tech-fp1170x650.jpg?1671553963');">
+      <!-- Container -->
+      <div class="containe">
+          <nav> 
+              <a href="index.html">
+                  <img src="https://cdn.icon-icons.com/icons2/2072/PNG/512/internet_lock_locked_padlock_password_secure_security_icon_127100.png" alt="logo" class="logo">
+              </a> 
+          </nav>
+      </div>  
+  </header>
+
+    <!-- Carrossel-->
+    <div class="slider">
+      <div class="slides">
+          <!-- Radio BUTTONS-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!-- Fim radio BUTTONS -->
+  
+          <!-- imegens-->
+          <div class="slide first">
+              <img src="img/3.png" alt="image1">
+          </div> 
+          <div class="slide second">
+              <img src="img/6.png" alt="image2">
+          </div> 
+          <div class="slide third">
+              <img src="img/4.png" alt="image3">
+          </div> 
+          <div class="slide forth">
+              <img src="img/7.png" alt="image4">
+          </div> 
+          <!-- Fim imagens-->
+  
+          <!-- Navigation -->
+          <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+          </div>
+          <!-- End Navigation-->
+      </div>
+      
+      <div class="manual-navigation">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="header">
+          <span>Cadastro</span>
+          <button onclick="openModal()" id="new">Incluir</button>
+      </div>
+
+      <div class="divTable">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Nome</th>
+                      <th>Endereço</th>
+                      <th>Conta de água</th>
+                      <th>Dica de Consumo</th>
+                      <th class="acao">Editar</th>
+                      <th class="acao">Excluir</th>
+                  </tr>
+              </thead>
+              <tbody>
+              </tbody>
+          </table>
+      </div>
+
+      <div class="modal-container">
+          <div class="modal">
+              <form>
+                  <label for="m-nome">Nome</label>
+                  <input id="m-nome" type="text" required />
+  
+                  <label for="m-endereco">Endereço</label>
+                  <input id="m-endereco" type="text" required />
+  
+                  <label for="m-salario">Conta de água</label>
+                  <input id="m-salario" type="number" required />
+                  <button id="btnSalvar">Salvar</button>
+              </form>
+          </div>
+      </div>
+  </div>
+   <!--footer-->
+   <footer class="footer">
+    <div class="container">
+        <div class="links">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <p>Desenvolvido por Rodrigo</p>
+    </div>
+  </footer>
+ <!-- End Footer-->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

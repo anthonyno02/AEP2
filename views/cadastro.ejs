@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Usuário</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro do Usuário</h2>
+        <form action="/users/save" method="POST">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <p class="text-muted">A senha deve ter pelo menos 8 caracteres, incluindo um número e um caractere especial.</p>
+                <input type="password" id="senha" name="senha" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="confsenha">Confirme a Senha:</label>
+                <input type="password" id="confsenha" name="confsenha" class="form-control" required>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" id="ativo" name="ativo" class="form-check-input">
+                <label class="form-check-label" for="ativo">Ativo</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
+        </form>
+        <a href="/users" class="btn btn-secondary mt-3">Retornar</a>
+    </div>
+</body>
+</html>
